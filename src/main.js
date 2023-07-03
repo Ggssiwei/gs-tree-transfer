@@ -1,13 +1,13 @@
-import Vue from 'vue'
+import './assets/main.css'
+
+import { createApp } from 'vue'
 import App from './App.vue'
-import './plugins/element.js'
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+import 'wl-core' 
 
-/* import wl from "wl-tree-transfer";
-import "wl-tree-transfer/lib/wl-tree-transfer.css"
-Vue.use(wl); */
+const app = createApp(App);
 
-Vue.config.productionTip = false
-
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+app.use(ElementPlus);
+app.use(App)
+app.mount('#app')

@@ -1,6 +1,6 @@
-import wlTreeTransfer from "./tree-transfer/";
+import TreeTransfer from "./Transfer";
 
-const components = [wlTreeTransfer];
+const components = [TreeTransfer];
 
 const install = function(Vue) {
   components.forEach(component => {
@@ -14,5 +14,5 @@ if (typeof window !== "undefined" && window.Vue) {
 
 export default {
   install,
-  wlTreeTransfer
+  TreeTransfer
 };

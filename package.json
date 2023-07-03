@@ -1,35 +1,31 @@
 {
-  "name": "wl-tree-transfer",
-  "version": "1.2.1",
+  "name": "gs-tree-transfer",
+  "version": "1.0.0",
   "private": false,
-  "description": "A tree shaped shuttle box assembly based on Vue and element-ui 一个基于vue.js和element-ui的树形穿梭框，也可用于邮件通讯录",
-  "author": "weilan",
+  "description": "A tree shaped shuttle box assembly based on Vue3 and element-plus 一个基于vue3和element-plus的树形穿梭框，也可用于邮件通讯录",
+  "author": "gs,NymphEX",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name wl-tree-transfer --dest lib src/components/index.js"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "main": "lib/wl-tree-transfer.umd.min.js",
+  "main": "./dist/tree-transfer.es.umd.js",
+  "module": "./dist/tree-transfer.es.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/tree-transfer.es.js",
+      "require": "./dist/tree-transfer.es.umd.js"
+    }
+  },
   "dependencies": {
-    "core-js": "^2.6.5",
-    "element-ui": "^2.4.5",
-    "vue": "^2.6.10",
-    "wl-core": "^1.1.7",
-    "wl-tree-transfer": "^1.1.1"
+    "element-plus": "^2.3.7",
+    "sass": "^1.63.6",
+    "vue": "^3.3.4",
+    "wl-core": "^1.1.9"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.11.0",
-    "@vue/cli-plugin-eslint": "^3.11.0",
-    "@vue/cli-service": "^3.11.0",
-    "babel-eslint": "^10.0.1",
-    "babel-plugin-component": "^1.1.1",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "node-sass": "^4.14.1",
-    "sass-loader": "^9.0.2",
-    "vue-cli-plugin-element": "^1.0.1",
-    "vue-template-compiler": "^2.6.10"
+    "@vitejs/plugin-vue": "^4.2.3",
+    "vite": "^4.3.9"
   },
   "eslintConfig": {
     "root": true,
@@ -45,19 +41,14 @@
       "parser": "babel-eslint"
     }
   },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
   "browserslist": [
     "> 1%",
     "last 2 versions"
   ],
   "bugs": {
-    "url": "https://github.com/hql7/wl-tree-transfer/issues"
+    "url": "https://github.com/Ggssiwei/gs-tree-transfer/issues"
   },
-  "homepage": "https://github.com/hql7/wl-tree-transfer#readme",
+  "homepage": "https://github.com/Ggssiwei/gs-tree-transfer#readme",
   "keyword": [
     "tree-transfer",
     "tree",
@@ -72,9 +63,9 @@
     "通讯录",
     "邮件通讯录"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+git@github.com:hql7/wl-tree-transfer.git"
+    "url": ""
   }
 }
